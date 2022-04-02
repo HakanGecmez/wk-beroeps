@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Soccer</h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="wk.mp4" muted loop  autoplay></video> 
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Never Stop</h2>
+            <h3>Exploring the soccer world</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, nam delectus. Blanditiis minus recusandae numquam eos velit! Eos magni corporis rerum necessitatibus. Reprehenderit aliquid eligendi at porro, recusandae corporis. Incidunt.</p>
+            <a href="#">Explore</a>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="whiteF.png" alt=""></a></li>
+            <li><a href="#"><img src="twit.png" alt=""></a></li>
+            <li><a href="#"><img src="insta11.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <lu>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </lu>
+    </div>
+
+    <div class="cursor"></div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+        })
+
+        const cursor = document.querySelector('.cursor');
+        
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+ "px;")
+        })
+    </script>
+
+</body>
+</html>
+<!--dit is een commentaar -->
